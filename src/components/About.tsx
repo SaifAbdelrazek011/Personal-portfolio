@@ -1,9 +1,17 @@
-import aboutImg from "../assets/Saif_Abdelrazek_About.jpg";
 import { ABOUT_TEXT } from "../constants/index";
 import { motion } from "framer-motion";
 import Technologies from "./Technologies";
 
+import React, { useState, useEffect } from "react";
+
 function About() {
+  const [aboutImg, setAboutImg] = useState<string | null>(null);
+
+  useEffect(() => {
+    setAboutImg(
+      "https://cdn.saifabdelrazek.com/images/saifabdelrazek_resala_medal.jpg"
+    );
+  }, []);
   return (
     <>
       <div className="border-b border-neutral-900 pb-4 sm:text-justify">
@@ -15,7 +23,7 @@ function About() {
             className="w-full lg:w-1/2 lg:p-8"
           >
             <div className="flex items-center justify-center">
-              <img className="rounded-2xl" src={aboutImg} alt="" />
+              <img className="rounded-2xl" src={aboutImg || ""} alt="" />
             </div>
           </motion.div>
           <motion.div

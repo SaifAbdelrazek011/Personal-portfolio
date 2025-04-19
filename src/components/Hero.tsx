@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from "react";
 import { HERO_CONTENT } from "../constants/index";
-import profilePic from "../assets/Saif_Abdelrazek.jpg";
 import { motion } from "framer-motion";
 
 const container = (delay: number) => ({
@@ -12,6 +12,13 @@ const container = (delay: number) => ({
 });
 
 function Hero() {
+  const [profilePic, setProfilePic] = useState("");
+
+  useEffect(() => {
+    // Simulating an API call to get the image URL
+    setProfilePic("https://cdn.saifabdelrazek.com/images/saifabdelrazek.jpg");
+  }, []);
+
   return (
     <div className="border-b border-neutral-900 mb-5">
       <div className="flex flex-wrap">

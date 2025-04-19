@@ -17,7 +17,10 @@ function Projects() {
               className="w-full lg:w-1/4"
             >
               <img
-                src={project.image}
+                src={
+                  "https://cdn.saifabdelrazek.com/images/projects/" +
+                  project.image
+                }
                 width={150}
                 height={150}
                 alt={project.title}

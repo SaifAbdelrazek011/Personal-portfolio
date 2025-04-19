@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/forkifyproject.png";
-import project2 from "../assets/projects/fablabproject.png";
-import project3 from "../assets/projects/filmoraproject.png";
-import project4 from "../assets/projects/speedtestproject.png";
+const project1 = "forkifyproject.png";
+const project2 = "fablabproject.png";
+const project3 = "filmoraproject.png";
+const project4 = "speedtestproject.png";
 
 type BaseType = {
   description: string;
